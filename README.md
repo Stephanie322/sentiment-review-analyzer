@@ -42,12 +42,15 @@ cd sentiment-review-analyzer
 ```
 ## 4. Install dependencies:
 
+```bash
 pip install -r requirements.txt
-
+```
 ## 5. (Optional) Download necessary tokenizer/model ahead of time:
 
 -from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
 -AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
+
 -AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
 
 ## 6.Running the App Locally:
@@ -71,9 +74,13 @@ Suggestions and contributions are always welcome!
 ## 9. Tech Stack:
 
 **Python (Flask)
+
 **Transformers (Hugging Face)
+
 **BeautifulSoup (Web Scraping)
+
 **Matplotlib (Data Visualization)
+
 **IMDb (target site)
 
 
