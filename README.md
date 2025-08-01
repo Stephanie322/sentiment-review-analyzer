@@ -55,9 +55,10 @@ pip install -r requirements.txt
 
 ## 6.Running the App Locally:
 
-app.py
+python app.py
+
 Once everything is installed, start the Flask server:
-Then go to http://127.0.0.1:5000/ in your browser.
+Then go to local host address in your browser.
 Paste the URL of an IMDb reviews page (e.g., a movie review section), and let the app analyze and visualize the sentiment of the reviews.
 
 ## 7. 🐞 Found a Bug? :
