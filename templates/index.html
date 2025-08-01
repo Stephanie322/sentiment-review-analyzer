@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Review Sentiment Analyzer</title>
+    <style>
+        body {
+        
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f7f9fc;
+            color: #2c3e50;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0047b3;
+        }
+
+        .results {
+            margin-top: 40px;
+        }
+
+        .results h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .results img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Review Sentiment Analyzer</h1>
+        <form method="POST">
+            <input type="text" name="url" placeholder="Paste review page URL here" required>
+            <button type="submit">Analyze</button>
+        </form>
+
+        <div class="results">
+            {% if chart %}
+                <h2>Sentiment Analysis Result</h2>
+                <img src="{{ chart }}" alt="Sentiment Chart">
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+
