@@ -14,6 +14,7 @@ This project:
 
 * Uses BeautifulSoup to scrape IMDb reviews
 * Applies a multilingual BERT model (`nlptown/bert-base-multilingual-uncased-sentiment`) to analyze sentiments
+(any other BERT model probably won't work )
 * Plots a visual summary using Matplotlib
 * Runs smoothly as a lightweight Flask web app
 
